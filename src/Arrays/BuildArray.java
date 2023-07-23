@@ -2,6 +2,8 @@ package Arrays;
 
 import java.util.*;
 
+//https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
 public class BuildArray {
     public static void main(String[] args) {
         int[] nums = {5, 0, 1, 2, 3, 4};
