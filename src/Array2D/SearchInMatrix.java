@@ -6,19 +6,19 @@ public class SearchInMatrix {
     public static void main(String[] args) {
         // Matrix is sorted in row wise and column wise manner
         int[][] matrix = {
-                {10, 20, 30, 40},
-                {15, 25, 35, 45},
-                {28, 29, 37, 49},
-                {33, 34, 38, 50}
+                {10, 20, 30, 40, 50},
+                {15, 25, 35, 45, 55},
+                {28, 29, 37, 49, 58},
+                {33, 34, 38, 50, 60}
         };
 
-        System.out.println(Arrays.toString(searchInMatrix2(matrix, 29)));
+        System.out.println(Arrays.toString(searchInMatrix2(matrix, 22)));
     }
 
     // Matrix is sorted in row wise and column wise manner
     static int[] searchInMatrix2(int[][] matrix, int target) {
         int r = 0;
-        int c = matrix.length - 1;
+        int c = matrix[0].length - 1;
 
         while (r < matrix.length && c >= 0) {
             // case 1
