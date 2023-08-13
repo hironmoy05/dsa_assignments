@@ -1,10 +1,14 @@
 package Arrays;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 // https://leetcode.com/problems/missing-number/
 public class Questions {
     public static void main(String[] args) {
-        int[] nums = {0, 1};
-        System.out.println(missingNumber(nums));
+        int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
+        ArrayList<Integer> missingNumbers = findDisappearedNumbers(nums);
+        System.out.println(missingNumbers);
     }
 
     static int missingNumber(int[] nums) {
@@ -28,6 +32,31 @@ public class Questions {
             }
 
         return nums.length;
+    }
+
+    //  https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/ (Done with Cyclic Sort)
+    static ArrayList<Integer> findDisappearedNumbers(int[] nums) {
+        int i = 0;
+        ArrayList<Integer> ans = new ArrayList<>();
+
+        while (i < nums.length) {
+            int correct = nums[i] - 1;
+
+            if (nums[i] != nums[correct]) {
+                swap(nums, i, correct);
+            } else {
+                i++;
+            }
+        }
+
+        System.out.println(Arrays.toString(nums));
+        for (int j = 0; j < nums.length; j++) {
+            if (j + 1 != nums[j]) {
+                ans.add(j + 1);
+            }
+        }
+
+        return ans;
     }
 
     static void swap(int[] nums, int first, int second) {
