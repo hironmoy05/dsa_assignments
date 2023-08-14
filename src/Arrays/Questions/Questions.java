@@ -1,9 +1,9 @@
-package Arrays;
+package Arrays.Questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-// https://leetcode.com/problems/missing-number/
+// https://leetcode.com/problems/missing-number/ (Amazon)
 public class Questions {
     public static void main(String[] args) {
         int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
@@ -35,6 +35,7 @@ public class Questions {
     }
 
     //  https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/ (Done with Cyclic Sort)
+    // Google Question
     static ArrayList<Integer> findDisappearedNumbers(int[] nums) {
         int i = 0;
         ArrayList<Integer> ans = new ArrayList<>();
@@ -42,7 +43,7 @@ public class Questions {
         while (i < nums.length) {
             int correct = nums[i] - 1;
 
-            if (nums[i] != nums[correct]) {
+            if (i + 1 != nums[correct]) {
                 swap(nums, i, correct);
             } else {
                 i++;
