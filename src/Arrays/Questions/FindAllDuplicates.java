@@ -5,7 +5,7 @@ import java.util.*;
 // https://leetcode.com/problems/find-all-duplicates-in-an-array/submissions/ (microsoft, google)
 public class FindAllDuplicates {
     public static void main(String[] args) {
-        int[] nums = {1};
+        int[] nums = {4, 3, 2, 1, 5, 3, 2};
         System.out.println(findDuplicates(nums));
         System.out.println(Arrays.toString(nums));
     }
