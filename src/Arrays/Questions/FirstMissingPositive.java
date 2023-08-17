@@ -2,6 +2,7 @@ package Arrays.Questions;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/first-missing-positive/submissions/1023554605/ (Amazon)
 public class FirstMissingPositive {
     public static void main(String[] args) {
         int[] nums = {1};
