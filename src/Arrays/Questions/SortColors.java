@@ -2,6 +2,7 @@ package Arrays.Questions;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/sort-colors/description/
 public class SortColors {
     public static void main(String[] args) {
         int[] numbers = {2, 0, 2, 1, 1, 0};
